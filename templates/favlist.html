@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+
+{% block page_title %} Fav List {% endblock %}
+
+
+{% block content %} 
+
+{% for fav in fav_list %}
+
+<h2>{{fav.song_title}} </h2>
+
+<p> - <a href="{% url 'fav_detail' pk=fav.pk %} ">Details</a> </p>
+<p> -  <a href="{% url 'opinion_detail' pk=fav.pk %} "> Opinion </a> </p>
+<p>🠆 id number: {{fav.id}} </p>
+
+<br>
+{% endfor %}
+
+
+{% endblock%}
