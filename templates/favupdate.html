@@ -1,14 +1,28 @@
 {% extends '_base.html' %}
 
 
-{% block page_title %}  {% endblock %}
+{% block page_title %} Update New Music Fav {% endblock %}
 
 
-{% block content %} 
+{% block content %}
+<div class="container">
+    <br>
+    <form class='well form-horizontal' action="" method="POST">
 
-<p>
-    
-</p>
+        <fieldset>
+            <legend>
+                <h2><b>Updating A Fav Form</b></h2>
+            </legend>
+            {% csrf_token %}
+            <div class="form-group">
+                {{form.as_p}}
+            </div>
+
+            <input type="submit" class="create-button" value="Update"></input>
+
+    </form>
+</div>
+
 
 
 {% endblock %}

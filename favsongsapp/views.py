@@ -39,11 +39,13 @@ class OpinionDetailView(DetailView):
 class FavCreateView(CreateView):
     template_name = "favcreate.html"
     model = Fav
+    fields = ('__all__') 
 
 
 class FavUpdateView(UpdateView):
     template_name = "favupdate.html"
     model = Fav
+    fields = ['song_title', 'artist', 'album', 'year_of_release', 'rating']
 
 
 class FavDeleteView(DeleteView):
