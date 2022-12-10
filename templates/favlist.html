@@ -7,11 +7,14 @@
 
 {% for fav in fav_list %}
 
-<h2>{{fav.song_title}} </h2>
-
-<p> - <a href="{% url 'fav_detail' pk=fav.pk %} ">Details</a> </p>
-<p> -  <a href="{% url 'opinion_detail' pk=fav.pk %} "> Opinion </a> </p>
-<p>🠆 id number: {{fav.id}} </p>
+  <div class="card" style="width: 35rem;">
+    <h3 class="card-header">{{fav.song_title}}</h3>
+    <div class="card-body">
+      <p class="card-text">🠆 id number: {{fav.id}} </p>
+      <a href="{% url 'fav_detail' pk=fav.pk %}" class="card-link">Details</a>
+      <a href="{% url 'opinion_detail' pk=fav.pk %}" class="card-link">Opinion</a>
+    </div>
+  </div>
 
 <br>
 {% endfor %}

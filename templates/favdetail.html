@@ -6,18 +6,15 @@
 
 {% block content %} 
 
-<p>
-    Artist: {{fav.artist}}
-    <br>
-    Album: {{fav.album}}
-    <br>
-    Year Of Release: {{fav.year_of_release}}
-    <br>
-    Rating: {{fav.rating}}
-    <br>
-    Reviewer: {{fav.reviewer}}
-
-</p>
+<div class="card" style="width: 20rem;">
+    <div class="card-body">
+      <p class="card-text"> <b> Artist: </b> {{fav.artist}} </p>
+      <p class="card-text"> <b> Album: </b> {{fav.album}} </p>
+      <p class="card-text"> <b> Year Of Release: </b> {{fav.year_of_release}} </p>
+      <p class="card-text"> <b> Rating: </b> {{fav.rating}} </p>
+      <p class="card-text"> <b> Reviewer: </b> {{fav.reviewer}} </p>
+    </div>
+  </div>
 
 
 {% endblock %}
