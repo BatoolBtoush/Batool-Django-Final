@@ -1,4 +1,4 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 from django.views.generic import (
     TemplateView,
     DetailView,
@@ -8,6 +8,8 @@ from django.views.generic import (
     DeleteView,
 )
 from .models import Fav, Opinion
+from django.urls import reverse
+
 
 # Create your views here.
 
@@ -51,3 +53,22 @@ class FavUpdateView(UpdateView):
 class FavDeleteView(DeleteView):
     template_name = "favdelete.html"
     model = Fav
+    success_url = '/fav-home'
+
+
+class OpinionCreateView(CreateView):
+    template_name = "opinioncreate.html"
+    model = Opinion
+    fields = ('__all__') 
+
+
+class OpinionUpdateView(UpdateView):
+    template_name = "opinionupdate.html"
+    model = Opinion
+    fields = ['song', 'opinion']
+
+
+class OpinionDeleteView(DeleteView):
+    template_name = "opiniondelete.html"
+    model = Opinion
+    success_url = '/fav-home'

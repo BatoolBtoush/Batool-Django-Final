@@ -1,7 +1,7 @@
 {% extends '_base.html' %}
 
 
-{% block page_title %} Update New Music Fav {% endblock %}
+{% block page_title %} Create New Opinion {% endblock %}
 
 
 {% block content %}
@@ -11,14 +11,14 @@
 
         <fieldset>
             <legend>
-                <h2><b>Updating A Fav Form</b></h2>
+                <h2><b>Creating An Opinion Form</b></h2>
             </legend>
             {% csrf_token %}
             <div class="form-group">
                 {{form.as_p}}
             </div>
 
-            <input type="submit" class="update-button" value="Update"></input>
+            <input type="submit" class="create-button" value="Create"></input>
 
     </form>
 </div>

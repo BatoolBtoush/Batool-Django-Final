@@ -28,3 +28,6 @@ class Opinion(models.Model):
     
     def __str__(self):
         return str(self.reviewer) 
+
+    def get_absolute_url(self):
+        return reverse('opinion_detail', kwargs={"pk": self.pk})

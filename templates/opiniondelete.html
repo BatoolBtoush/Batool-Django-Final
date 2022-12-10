@@ -1,8 +1,6 @@
 {% extends '_base.html' %}
 
-
-{% block page_title %} Update New Music Fav {% endblock %}
-
+{% block page_title %} Delete {{opinion.opinion}} {% endblock %}
 
 {% block content %}
 <div class="container">
@@ -11,18 +9,19 @@
 
         <fieldset>
             <legend>
-                <h2><b>Updating A Fav Form</b></h2>
+                <h3><b>Deleting {{opinion.opinion}}  </b></h3>
             </legend>
+
+            <h4>Press Delete to complete</h4>
             {% csrf_token %}
             <div class="form-group">
                 {{form.as_p}}
             </div>
-
-            <input type="submit" class="update-button" value="Update"></input>
+            <input type="submit" class="delete-button" value="Delete!">
 
     </form>
 </div>
 
 
-
 {% endblock %}
+
