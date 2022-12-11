@@ -10,7 +10,8 @@ from .views import (
     FavDeleteView,
     OpinionCreateView,
     OpinionUpdateView,
-    OpinionDeleteView
+    OpinionDeleteView,
+    fav_and_opinion_view
 )
 
 
@@ -26,6 +27,7 @@ urlpatterns = [
     path("opinion-create/", OpinionCreateView.as_view(), name="opinion_create"),
     path("opinion-update/<int:pk>", OpinionUpdateView.as_view(), name="opinion_update"),
     path("opinion-delete/<int:pk>", OpinionDeleteView.as_view(), name="opinion_delete"),
+    path('fav-and-opinion', fav_and_opinion_view, name='fav_and_opinion')
 
 
 ]

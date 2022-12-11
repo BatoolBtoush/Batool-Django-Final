@@ -1,4 +1,4 @@
-# from django.shortcuts import render
+from django.shortcuts import render
 from django.views.generic import (
     TemplateView,
     DetailView,
@@ -8,8 +8,7 @@ from django.views.generic import (
     DeleteView,
 )
 from .models import Fav, Opinion
-from django.urls import reverse
-
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -72,3 +71,16 @@ class OpinionDeleteView(DeleteView):
     template_name = "opiniondelete.html"
     model = Opinion
     success_url = '/fav-home'
+
+
+def fav_and_opinion_view(request):
+   
+    fav_list = Fav.objects.all()
+    opinion_list = Opinion.objects.all()
+    # print(fav_list)
+    # print(opinion_list)
+    context = {}
+    context['favorite_list'] = fav_list
+    context['opinion_list'] = opinion_list
+    
+    return render(request, 'rendering.html', context)

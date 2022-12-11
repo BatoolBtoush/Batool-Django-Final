@@ -1,0 +1,44 @@
+{% extends '_base.html' %}
+
+{% block page_title %} Page {% endblock %}
+
+{% block content %} 
+Content for the fav & opinion Page
+
+
+<br>
+
+<br>
+
+<h2> Favorite Songs  </h2>
+<ul>
+    {% for fav in favorite_list %}
+    <div class="card" style="width: 35rem;">
+        <h3 class="card-header">{{fav.song_title}}</h3>
+        <div class="card-body">
+          <p class="card-text">🠆 id number: {{fav.id}} </p>
+        </div>
+      </div>
+    {% endfor %}
+</ul>
+
+<br>
+
+<br>
+
+<br>
+
+<h2> Favorite Opinions  </h2>
+
+<ul>
+    {% for opinion in opinion_list %}
+    <div class="card" style="width: 35rem;">
+        <h3 class="card-header">{{opinion.opinion}}  </h3>
+        <div class="card-body">
+          <p class="card-text">🠆 id number: {{opinion.id}} </p>
+        </div>
+      </div>
+    {% endfor %}
+</ul>
+
+{% endblock%}
