@@ -2,7 +2,7 @@
 
 {% block page_title %} Page {% endblock %}
 
-{% block content %} 
+{% block main %} 
 Content for the fav & opinion Page
 
 
@@ -13,12 +13,13 @@ Content for the fav & opinion Page
 <h2> Favorite Songs  </h2>
 <ul>
     {% for fav in favorite_list %}
-    <div class="card" style="width: 35rem;">
+    <div class="card text-light bg-dark" style="width: 35rem;">
         <h3 class="card-header">{{fav.song_title}}</h3>
         <div class="card-body">
           <p class="card-text">🠆 id number: {{fav.id}} </p>
         </div>
       </div>
+      <br>
     {% endfor %}
 </ul>
 
@@ -32,12 +33,13 @@ Content for the fav & opinion Page
 
 <ul>
     {% for opinion in opinion_list %}
-    <div class="card" style="width: 35rem;">
+    <div class="card text-light bg-dark" style="width: 35rem;">
         <h3 class="card-header">{{opinion.opinion}}  </h3>
         <div class="card-body">
           <p class="card-text">🠆 id number: {{opinion.id}} </p>
         </div>
       </div>
+      <br>
     {% endfor %}
 </ul>
 
