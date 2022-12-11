@@ -12,7 +12,8 @@
       <p class="card-text"> <b> Opinion: </b> {{opinion.opinion}} </p>
       <p class="card-text"> <b> Reviewer: </b> {{opinion.reviewer}} </p>
     </div>
+    <a href="{% url 'opinion_update' opinion.pk %}">Update Opinion</a>
+    <a href="/opinion-delete/{{opinion.id}}">Delete Opinion</a>
   </div> 
-
 
 {% endblock %}

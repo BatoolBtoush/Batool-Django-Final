@@ -31,6 +31,11 @@ class FavDetailView(DetailView):
     template_name = "favdetail.html"
     model = Fav
 
+class OpinionListView(ListView):
+    template_name = "opinionlist.html"
+    model = Opinion
+    context_object_name = "opinion_list"
+
 
 class OpinionDetailView(DetailView):
     template_name = "opiniondetail.html"

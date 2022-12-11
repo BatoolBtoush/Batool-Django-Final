@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+
+{% block page_title %} Opinion List {% endblock %}
+
+
+{% block content %} 
+
+{% for opinion in opinion_list %}
+
+  <div class="card" style="width: 35rem;">
+    <h3 class="card-header">{{opinion.opinion}}</h3>
+    <div class="card-body">
+      <p class="card-text">🠆 id number: {{opinion.id}} </p>
+      <a href="{% url 'opinion_detail' pk=opinion.pk %}" class="card-link">Details</a>
+    </div>
+  </div>
+
+<br>
+{% endfor %}
+
+
+{% endblock%}

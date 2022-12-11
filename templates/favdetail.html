@@ -16,7 +16,11 @@
       <p class="card-text"> <b> Reviewer: </b> {{fav.reviewer}} </p>
       <p class="card-text"> <b> ID: </b> {{fav.id}} </p>
     </div>
+
+    <a href="{% url 'fav_update' fav.pk %}">Update Fav</a>
+    <a href="/fav-delete/{{fav.id}}">Delete Fav</a>
   </div>
+
 
 
 {% endblock %}
