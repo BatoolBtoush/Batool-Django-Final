@@ -1,13 +1,14 @@
 {% extends '_base.html' %}
 
 
-{% block page_title %} Opinion Details for {{fav.song_title}} {% endblock %}
+{% block page_title %} Opinion Details for {{opinion.song}} {% endblock %}
 
 
 {% block main %} 
 
 <div class="card text-light bg-dark" style="width: 20rem;">
     <div class="card-body">
+      <p class="card-text"> <b> Song: </b> {{opinion.song}}  </p>
       <p class="card-text"> <b> ID: </b> {{opinion.id}} </p>
       <p class="card-text"> <b> Opinion: </b> {{opinion.opinion}} </p>
       <p class="card-text"> <b> Reviewer: </b> {{opinion.reviewer}} </p>

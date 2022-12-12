@@ -1,6 +1,6 @@
 {% extends '_base.html' %}
 
-{% block page_title %} Page {% endblock %}
+{% block page_title %} Page for Rendering both the Favs and the Opinions {% endblock %}
 
 {% block main %} 
 Content for the fav & opinion Page
@@ -36,7 +36,8 @@ Content for the fav & opinion Page
     <div class="card text-light bg-dark" style="width: 35rem;">
         <h3 class="card-header">{{opinion.opinion}}  </h3>
         <div class="card-body">
-          <p class="card-text">🠆 id number: {{opinion.id}} </p>
+          <p class="card-text">Song: {{opinion.song}} </p>
+          <p class="card-text">Id number: {{opinion.id}} </p>
         </div>
       </div>
       <br>
