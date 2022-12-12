@@ -13,10 +13,15 @@ from .views import (
     OpinionCreateView,
     OpinionUpdateView,
     OpinionDeleteView,
-    fav_and_opinion_view
+    fav_and_opinion_view,
 )
 
-from favsongsapp.api.viewset import FavListAPIView, OpinionListAPIView, FavDetailAPIView, OpinionDetailAPIView
+from favsongsapp.api.viewset import (
+    FavDetailAPIView,
+    OpinionDetailAPIView,
+    FavListCreateAPIView,
+    OpinionListCreatAPIView
+)
 
 
 urlpatterns = [
@@ -32,13 +37,10 @@ urlpatterns = [
     path("opinion-create/", OpinionCreateView.as_view(), name="opinion_create"),
     path("opinion-update/<int:pk>", OpinionUpdateView.as_view(), name="opinion_update"),
     path("opinion-delete/<int:pk>", OpinionDeleteView.as_view(), name="opinion_delete"),
-    path('fav-and-opinion', fav_and_opinion_view, name='fav_and_opinion'),
-    path('api/fav-list',FavListAPIView.as_view(), name='api_fav_list'),
-    path('api/opinion-list',OpinionListAPIView.as_view(), name='api_opinion_list'),
-    path('api/fav-detail/<int:pk>',FavDetailAPIView.as_view(), name='api_fav_detail'),
-    path('api/opinion-detail/<int:pk>',OpinionDetailAPIView.as_view(), name='api_opinion_detail'),
-    
-
-
-
+    path("fav-and-opinion", fav_and_opinion_view, name="fav_and_opinion"),
+    path("api/fav-list", FavListCreateAPIView.as_view(), name="api_fav_list"),
+    path("api/opinion-list", OpinionListCreatAPIView.as_view(), name="api_opinion_list"),
+    path("api/fav-detail/<int:pk>", FavDetailAPIView.as_view(), name="api_fav_detail"),
+    path("api/opinion-detail/<int:pk>",OpinionDetailAPIView.as_view(),name="api_opinion_detail",
+    ),
 ]

@@ -3,40 +3,24 @@ from .serializers import FavSerializer, OpinionSerializer
 from favsongsapp.models import Fav, Opinion
 
 
-class FavListAPIView(generics.ListAPIView):
+class FavListCreateAPIView(generics.ListCreateAPIView):
     queryset = Fav.objects.all()
     serializer_class = FavSerializer
 
-class FavDetailAPIView(generics.RetrieveAPIView):
+class FavDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Fav.objects.all()
     serializer_class = FavSerializer
 
 
-# class FavCreateAPIView(generics.ListCreateAPIView):
-#     queryset = Fav.objects.all()
-#     serializer_class = FavSerializer
 
 
-# class FavDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = Fav.objects.all()
-#     serializer_class = FavSerializer
+
+class OpinionListCreatAPIView(generics.ListCreateAPIView):
+    queryset = Opinion.objects.all()
+    serializer_class = OpinionSerializer 
 
 
-class OpinionListAPIView(generics.ListAPIView):
+class OpinionDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Opinion.objects.all()
     serializer_class = OpinionSerializer
-
-class OpinionDetailAPIView(generics.RetrieveAPIView):
-    queryset = Opinion.objects.all()
-    serializer_class = OpinionSerializer
-
-
-# class OpinionCreatAPIView(generics.ListCreateAPIView):
-#     queryset = Opinion.objects.all()
-#     serializer_class = OpinionSerializer
-
-
-# class OpinionDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = Opinion.objects.all()
-#     serializer_class = OpinionSerializer
 
