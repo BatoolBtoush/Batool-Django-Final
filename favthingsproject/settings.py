@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ae9+_z5o7adyc#-v76h#r-kj4n#xm_d^)#q!v9a=sj7oogu1nn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['batool-favmusic-django.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
