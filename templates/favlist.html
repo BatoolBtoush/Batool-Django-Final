@@ -1,14 +1,14 @@
 {% extends '_base.html' %}
 
-{% block page_title %} Fav List {% endblock %}
+{% block page_title %} Favorite Songs List {% endblock %}
 
 
 {% block main %} 
 
 {% for fav in fav_list %}
 
-  <div class="card text-light bg-dark" style="width: 35rem;">
-    <h3 class="card-header">{{fav.song_title}}</h3>
+  <div class="card text-light bg-dark" style="width: 40rem;">
+    <h3 class="card-header">Song Title: {{fav.song_title}}</h3>
     <div class="card-body">
       <p class="card-text">🠆 id number: {{fav.id}} </p>
       <a href="{% url 'fav_detail' pk=fav.pk %}" class="card-link">Details</a>

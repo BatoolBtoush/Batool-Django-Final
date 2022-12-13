@@ -25,7 +25,7 @@ from favsongsapp.api.viewset import (
 
 
 urlpatterns = [
-    path("fav-home", HomeFavView.as_view(), name="fav_home"),
+    path("home", HomeFavView.as_view(), name="fav_home"),
     path("fav-about", AboutFavView.as_view(), name="fav_about"),
     path("fav-list", FavListView.as_view(), name="fav_list"),
     path("fav-detail/<int:pk>", FavDetailView.as_view(), name="fav_detail"),

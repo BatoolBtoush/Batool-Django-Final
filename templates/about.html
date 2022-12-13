@@ -2,7 +2,22 @@
 
 {% block page_title %} About Page {% endblock %}
 
-{% block main %} 
-Content for the About Page
+{% block hero %}
+<p class="font-italic">
+    This full stack web application is to show, add, update and delete favorite songs, 
+    <br>
+    while also allowing the user to form opinions about them.
+</p>
+
+<p>
+    There are also some end points to the API of the web app:
+    <ul>
+        <li> api/fav-list &rarr; To show a list of all the favorite songs and create new ones. </li>
+        <li> api/opinion-list &rarr; To show a list of all the opinions and create new ones. </li>
+        <li> api/fav-detail/&lt;int:pk&gt; &rarr; To show details about a specific song, update and delete it. </li>
+        <li> api/opinion-detail/&lt;int:pk&gt; &rarr; To show details about a specific opinion, update and delete it.  </li>
+
+    </ul>
+</p>
 
 {% endblock%}

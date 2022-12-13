@@ -57,7 +57,7 @@ class FavUpdateView(UpdateView):
 class FavDeleteView(DeleteView):
     template_name = "favdelete.html"
     model = Fav
-    success_url = '/fav-home'
+    success_url = '/home'
 
 
 class OpinionCreateView(CreateView):
@@ -75,7 +75,7 @@ class OpinionUpdateView(UpdateView):
 class OpinionDeleteView(DeleteView):
     template_name = "opiniondelete.html"
     model = Opinion
-    success_url = '/fav-home'
+    success_url = '/home'
 
 
 def fav_and_opinion_view(request):
